@@ -21,6 +21,7 @@
           <p class="contenidoComentario"><?php echo $itemComentario['contenido'] ?></p>
 
           <?php echo form_open('news/like'); ?>
+          <input type="hidden" name="idNoticia" value="<?php echo $itemComentario['noticia']?>">
           <input type="hidden" name="idNoticia2" value="<?php echo $itemComentario['id']?>">
           <input type="hidden" name="likesComent" value="<?php echo $itemComentario['likes']?>">
           <button type="submit" class="secondary-content"><i class="material-icons">&#xE8DC;</i><?php echo $itemComentario['likes']?></button>

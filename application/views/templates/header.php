@@ -54,6 +54,7 @@ try {
           <li><a href="<?=site_url('news/allPosts')?>">TODOS LOS POSTS</a></li>
           <li><a href="<?=site_url('news/allComents')?>">TODOS LOS COMENTARIOS</a></li>
           <li><a href="<?=site_url('home/principal')?>">PRINCIPAL</a></li>
+          <li><a href="<?=site_url('home/about')?>">ACERCA DE</a></li>
           <?php if($this->session->userdata('usuario')){?>
             <li><a href="<?=site_url('home/logout')?>">LOGOUT</a></li>
             <?php }?>
