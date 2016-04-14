@@ -49,9 +49,7 @@ class News extends CI_Controller {
       $this->load->view('templates/footer');
     } else {
 			$this->Model_noticia->insertNoticia($titulo, $texto);
-			$this->load->view('templates/header');
-			$this->load->view('news/success');
-			$this->load->view('templates/footer');
+			$this->posts();
 		}
 
 	}
@@ -71,9 +69,7 @@ class News extends CI_Controller {
 			$this->load->view('templates/footer');
 		} else {
 			$this->Model_noticia->insertComentario($contenido, $autor, $noticia);
-			$this->load->view('templates/header');
-			$this->load->view('news/success');
-			$this->load->view('templates/footer');
+			$this->posts();
 		}
 
 	}
@@ -110,6 +106,16 @@ class News extends CI_Controller {
 
 		$this->Model_noticia->borrarPost($codigo);
 		$this->posts();
+	}
+
+	/* MONTAR PÁGINA DE TODOS LOS COMENTARIOS
+	* @Author: Antonio ferrera
+	*/
+	public function allComents() {
+		$data['coments'] = $this->Model_noticia->get_allComents();
+		$this->load->view('templates/header');
+		$this->load->view('news/allComents', $data);
+		$this->load->view('templates/footer');
 	}
 
 

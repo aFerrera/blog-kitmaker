@@ -62,16 +62,32 @@ class Model_noticia extends CI_Model {
 
     $texto = stripslashes(nl2br($comentario));
 
+if($this->session->userdata('usuario')){
+  $data = array(
+    'autor' => $autor,
+    'fecha' => standard_date('DATE_W3C', now()),
+    'contenido' => $texto,
+    'noticia' => $noticia
+  );
+}else{
+  $data = array(
+    'autor' => 'Anonimo',
+    'fecha' => standard_date('DATE_W3C', now()),
+    'contenido' => $texto,
+    'noticia' => $noticia
+  );
+}
 
-    $data = array(
-      'autor' => $autor,
-      'fecha' => standard_date('DATE_W3C', now()),
-      'contenido' => $texto,
-      'noticia' => $noticia
-    );
+
     return $this->db->insert('comentario', $data);
 
 
+  }
+
+  /*FUNCION QUE DEVUELVE TODOS LOS COMENTARIOS*/
+  public function get_allComents() {
+    $query = $this->db->get('comentario');
+    return $query->result_array();
   }
 
 }

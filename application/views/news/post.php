@@ -16,9 +16,9 @@
     <ul class="collection">
       <?php foreach ($comentario as $itemComentario): ?>
         <li class="collection-item avatar">
-          <img src="<?=base_url('assets/img/icono-user.png')?>" alt="" class="circle">
-          <span class="title"><b>Autor-</b> <?php echo $itemComentario['autor'] ?>| <b>fecha-</b> <?php echo $itemComentario['fecha'] ?></span>
-          <p><?php echo $itemComentario['contenido'] ?></p>
+          <i class="material-icons">&#xE853;</i>
+          <span class="title avatarComents"><b>Autor-</b> <?php echo $itemComentario['autor'] ?>| <b>fecha-</b> <?php echo $itemComentario['fecha'] ?></span>
+          <p class="contenidoComentario"><?php echo $itemComentario['contenido'] ?></p>
           <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
         </li>
       <?php endforeach; ?>
@@ -36,7 +36,7 @@
 
       <input type="hidden" name="autorComentario" value="<?php echo $this->session->userdata('usuario')?>"/>
 
-      <input type="submit" name="insertaComentario" id="insertaComentario" value="Comentar post" class="waves-light btn blue lighten-3 black-text"/>
+      <input type="submit" name="insertaComentario" id="insertaComentario" value="Comentar post" class="waves-light btn blue-grey lighten-3 black-text"/>
 
     </form>
   </div>

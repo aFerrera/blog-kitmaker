@@ -93,3 +93,25 @@ footer a{
 #cajaTabla{
   width: 80%;
 }
+
+#signIn{
+  width: 80%;
+}
+.contenidoComentario{
+  padding: 10px;
+}
+
+.tituloPost{
+  background-color: #b0bec5;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.textoPost{
+  padding-left: 20px;
+  padding-top: 20px;
+}
+
+thead{
+    background-color: #b0bec5;
+}

@@ -44,14 +44,15 @@ try {
         <img id="logo" alt="kitmaker_logo" src="<?= base_url('assets/img/kitmaker_logo.png')?>">
         <a class="brand" href="#"><b>-<?=$this->session->userdata('usuario')?></b></a>
         <!-- Dropdown Trigger -->
-        <a style="position: relative; left: 20px; float: left; width: 200px;" class='dropdown-button btn-large blue lighten-3 black-text' href='#' data-activates='dropdown1'>MENU</a>
+        <a style="position: relative; left: 20px; float: left; width: 200px;" class='dropdown-button btn-large blue-grey lighten-3 black-text' href='#' data-activates='dropdown1'>MENU</a>
 
         <!-- Dropdown Structure -->
-        <ul id='dropdown1' class='dropdown-content blue lighten-3 black-text'>
+        <ul id='dropdown1' class='dropdown-content blue-grey lighten-3 black-text'>
           <li><a href="<?=base_url()?>">HOME</a></li>
           <li><a href="<?=site_url('news/create')?>">NUEVA ENTRADA</a></li>
           <li><a href="<?=site_url('news/posts')?>">POSTS</a></li>
           <li><a href="<?=site_url('news/allPosts')?>">TODOS LOS POSTS</a></li>
+          <li><a href="<?=site_url('news/allComents')?>">TODOS LOS COMENTARIOS</a></li>
           <li><a href="<?=site_url('home/principal')?>">PRINCIPAL</a></li>
           <?php if($this->session->userdata('usuario')){?>
             <li><a href="<?=site_url('home/logout')?>">LOGOUT</a></li>

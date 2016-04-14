@@ -1,5 +1,9 @@
 $(document).ready(function(){
 
+  $('#cajaNoticias').hide();
+  $('.comentarios').hide();
+  $('#cajaNoticias').slideDown('slow');
+  $('.comentarios').slideDown('slow');
   $('.parallax').parallax();
 
   $('.dropdown-button').dropdown({
