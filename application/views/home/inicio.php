@@ -24,7 +24,7 @@
   </div>
 
   <div class="form-actions">
-    <?= form_button(array('type'=>'submit', 'content'=>'Ingresar', 'class'=>'btn btn-primary')); ?>
+    <?= form_button(array('type'=>'submit', 'content'=>'Ingresar', 'class'=>'btn btn-primary blue-grey lighten-3 black-text')); ?>
 
   </div>
 
