@@ -19,10 +19,15 @@
           <i class="material-icons">&#xE853;</i>
           <span class="title avatarComents"><b>Autor-</b> <?php echo $itemComentario['autor'] ?>| <b>fecha-</b> <?php echo $itemComentario['fecha'] ?></span>
           <p class="contenidoComentario"><?php echo $itemComentario['contenido'] ?></p>
-          <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
-        </li>
-      <?php endforeach; ?>
-    </ul>
+
+          <?php echo form_open('news/like'); ?>
+          <input type="hidden" name="idNoticia2" value="<?php echo $itemComentario['id']?>">
+          <input type="hidden" name="likesComent" value="<?php echo $itemComentario['likes']?>">
+          <button type="submit" class="secondary-content"><i class="material-icons">&#xE8DC;</i><?php echo $itemComentario['likes']?></button>
+        </form>
+      </li>
+    <?php endforeach; ?>
+  </ul>
 
     <div class="nuevoComentario">
       <?php echo validation_errors(); ?>

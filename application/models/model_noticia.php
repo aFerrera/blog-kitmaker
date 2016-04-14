@@ -10,7 +10,7 @@ class Model_noticia extends CI_Model {
 
   function insertNoticia($titulo, $texto){
 
-     $text = stripslashes(nl2br($texto));
+    $text = stripslashes(nl2br($texto));
 
     if($this->session->userdata('usuario')){
       $data = array(
@@ -62,21 +62,21 @@ class Model_noticia extends CI_Model {
 
     $texto = stripslashes(nl2br($comentario));
 
-if($this->session->userdata('usuario')){
-  $data = array(
-    'autor' => $autor,
-    'fecha' => standard_date('DATE_W3C', now()),
-    'contenido' => $texto,
-    'noticia' => $noticia
-  );
-}else{
-  $data = array(
-    'autor' => 'Anonimo',
-    'fecha' => standard_date('DATE_W3C', now()),
-    'contenido' => $texto,
-    'noticia' => $noticia
-  );
-}
+    if($this->session->userdata('usuario')){
+      $data = array(
+        'autor' => $autor,
+        'fecha' => standard_date('DATE_W3C', now()),
+        'contenido' => $texto,
+        'noticia' => $noticia
+      );
+    }else{
+      $data = array(
+        'autor' => 'Anonimo',
+        'fecha' => standard_date('DATE_W3C', now()),
+        'contenido' => $texto,
+        'noticia' => $noticia
+      );
+    }
 
 
     return $this->db->insert('comentario', $data);
@@ -90,4 +90,12 @@ if($this->session->userdata('usuario')){
     return $query->result_array();
   }
 
+  /*FUNCION PARA LOS LIKES*/
+  public function likeUp($id, $likes){
+    $data = array(
+      'likes' => $likes + 1
+    );
+      $this->db->where('id', $id);
+      return $this->db->update('comentario', $data);
+  }
 }

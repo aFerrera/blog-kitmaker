@@ -118,6 +118,15 @@ class News extends CI_Controller {
 		$this->load->view('templates/footer');
 	}
 
+	public function like(){
+		  $this->load->helper('form');
+			$codigo = $this->input->post('idNoticia2');
+			$likes = $this->input->post('likesComent');
+
+			$this->Model_noticia->likeUp($codigo, $likes);
+			$this->allComents();
+	}
+
 
 
 }
