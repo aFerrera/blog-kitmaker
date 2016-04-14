@@ -32,5 +32,5 @@
 </div>
 
 <div class="parallax-container">
-  <div class="parallax" ><img src="<?=base_url('assets/img/nevado1.jpg') ?>" style="display: block; transform: translate3d(-50%, 512px, 0px); width: auto;"></div>
+  <div class="parallax" ><img src="<?=base_url('assets/img/nevado2.jpg') ?>" style="display: block; transform: translate3d(-50%, 512px, 0px); width: auto;"></div>
 </div>
