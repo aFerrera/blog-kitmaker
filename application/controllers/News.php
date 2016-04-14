@@ -63,6 +63,7 @@ class News extends CI_Controller {
 		$autor = $this->input->post('autorComentario');
 		$noticia = $this->input->post('idNoticia');
 
+
 		if ($this->form_validation->run() === FALSE) {
 			$this->load->view('templates/header');
 			$this->load->view('news/post');
@@ -122,9 +123,17 @@ class News extends CI_Controller {
 		  $this->load->helper('form');
 			$codigo = $this->input->post('idNoticia2');
 			$likes = $this->input->post('likesComent');
+			$cNoticia = $this->input->post('idNoticia');
 
 			$this->Model_noticia->likeUp($codigo, $likes);
-			$this->allComents();
+
+			$data['noticia'] = $this->Model_noticia->getNoticia($cNoticia);
+			$data['comentario'] = $this->Model_noticia->getComentarios($cNoticia);
+
+			$this->load->view('templates/header');
+			$this->load->view('news/post', $data);
+			$this->load->view('templates/footer');
+
 	}
 
 

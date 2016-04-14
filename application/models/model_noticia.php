@@ -53,6 +53,7 @@ class Model_noticia extends CI_Model {
   }
 
   public function getComentarios($id){
+    $this->db->order_by("id", "desc");
     $this->db->where("noticia", $id);
     $query = $this->db->get('comentario');
     return $query->result_array();
