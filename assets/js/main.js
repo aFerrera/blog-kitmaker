@@ -1,9 +1,6 @@
 $(document).ready(function(){
 
-
   $('.parallax').parallax();
-
-
 
   $('.dropdown-button').dropdown({
     inDuration: 300,
@@ -17,7 +14,7 @@ $(document).ready(function(){
 );
 $('.slider').slider({full_width: false});
 
-
+$('#myTable2').DataTable();
 
 
 });
