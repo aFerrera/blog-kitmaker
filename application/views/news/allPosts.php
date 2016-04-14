@@ -2,15 +2,18 @@
 <div id="cajaTabla" class="center-align center-block">
   <h2>ENTRADAS DEL BLOG</h2>
   <!-- DATATABLE DE POSTS -->
-  <table id="myTable" class="highlight">
+  <table id="myTable2" class="highlight">
     <thead>
-      <th>ID</th>
-      <th>TITULO</th>
-      <th>AUTOR</th>
-      <th>TEXTO</th>
-      <th>FECHA</th>
-      <th>ver</th>
-      <th></th>
+      <tr>
+        <th>ID</th>
+        <th>TITULO</th>
+        <th>AUTOR</th>
+        <th>TEXTO</th>
+        <th>FECHA</th>
+        <th>ver</th>
+      </tr>
+
+
     </thead>
     <tbody>
       <?php foreach ($news as $news_item): ?>
