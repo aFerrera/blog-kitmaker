@@ -5,6 +5,7 @@ $(document).ready(function(){
   $('#cajaNoticias').slideDown('slow');
   $('.comentarios').slideDown('slow');
   $('.parallax').parallax();
+  $('select').material_select();
 
   $('.dropdown-button').dropdown({
     inDuration: 300,
