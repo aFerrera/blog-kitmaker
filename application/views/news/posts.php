@@ -1,7 +1,7 @@
 <?php ?>
 <!-- VISTA PARA VISUALIZACIÓN DE POSTS MEDIANTE CARTAS-->
 <div id="cajaNoticias">
-  <h2>NUEVAS ENTRADAS</h2>
+  <h2>ULTIMAS ENTRADAS</h2>
 
   <a href="<?=site_url('news/create')?>" style="margin-left: 20px;" class="btn-floating btn-large waves-effect waves-light blue-grey lighten-3"><i class="material-icons">add</i></a>
 
