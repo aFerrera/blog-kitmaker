@@ -82,7 +82,7 @@ class News extends CI_Controller {
 	}
 
 	public function allPosts() {
-		$data['news'] = $this->Model_noticia->getNoticias();
+		$data['news'] = $this->Model_noticia->getAllNoticias();
 		$this->load->view('templates/header');
 		$this->load->view('news/allPosts', $data);
 		$this->load->view('templates/footer');
