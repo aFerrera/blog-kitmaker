@@ -8,7 +8,7 @@ class Model_noticia extends CI_Model {
     $this->load->helper('date');
   }
 
-  function insertNoticia($titulo, $texto){
+  function insertNoticia($titulo, $texto, $imagen){
 
     $text = stripslashes(nl2br($texto));
 
@@ -17,7 +17,8 @@ class Model_noticia extends CI_Model {
         'titulo' => $titulo,
         'texto' => $text,
         'fecha' => standard_date('DATE_W3C', now()),
-        'autor' => $this->session->userdata('usuario')
+        'autor' => $this->session->userdata('usuario'),
+        'imagen' => $imagen
       );
       return $this->db->insert('noticia', $data);
     }else{
@@ -25,7 +26,8 @@ class Model_noticia extends CI_Model {
         'titulo' => $titulo,
         'texto' => $texto,
         'fecha' => standard_date('DATE_W3C', now()),
-        'autor' => 'Anonimo'
+        'autor' => 'Anonimo',
+        'imagen' => $imagen
       );
       return $this->db->insert('noticia', $data);
     }

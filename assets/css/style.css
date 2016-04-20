@@ -64,6 +64,7 @@ body
 
 .body-noticia
 {
+  padding-left: 20px;
   text-align: left;
   border-bottom: solid 1px black;
 }
@@ -128,6 +129,23 @@ thead{
   margin-top: 5px;
 }
 
+.imgPost{
+  max-width: 300px;
+  height: auto;
+  padding-top: 10px;
+}
+
+.imgPostSmall{
+  max-width: 150px;
+  height: auto;
+  padding-top: 10px;
+
+}
+
+.imgComentario{
+  float: left;
+  width: 100px;
+}
 
 .visualizarNoticia{
   background-color: #b0bec5;

@@ -11,6 +11,7 @@
         <div class="card blue lighten-4">
           <div class="card-content black-text">
             <p class="card-title tituloPost"><b><?php echo $news_item['titulo']; ?></b></p>
+            <img class="imgPostSmall" src="<?php echo $news_item['imagen']; ?>" alt="" />
             <p class="textoPost"><?php echo substr($news_item['texto'], 0, 256); ?></p>
             <br>
 

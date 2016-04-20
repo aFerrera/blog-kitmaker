@@ -2,10 +2,12 @@
   <?php foreach ($noticia as $item): ?>
     <div class="header-noticia">
       <h2><?php echo $item['titulo']; ?></h2>
+
       <p>Autor - <?php echo $item['autor']; ?></p>
       <p>Fecha - <?php echo $item['fecha']; ?></p>
     </div>
     <div class="body-noticia">
+      <img class="imgPost center-block" src="<?php echo $item['imagen']; ?>" alt="" />
       <p><?php echo $item['texto']; ?></p>
     </div>
   <?php endforeach; ?>
@@ -16,8 +18,8 @@
     <ul class="collection">
       <?php foreach ($comentario as $itemComentario): ?>
         <li class="collection-item avatar ccc">
-          <i class="material-icons">&#xE853;</i>
-          <span class="title avatarComents"><b>Autor-</b> <?php echo $itemComentario['autor'] ?>| <b><?php echo $itemComentario['fecha'] ?></b></span>
+
+          <span class="title avatarComents"><i class="material-icons">&#xE853;</i><b>Autor-</b> <?php echo $itemComentario['autor'] ?>| <b><?php echo $itemComentario['fecha'] ?></b></span>
           <p class="contenidoComentario"><?php
           $str = $itemComentario['contenido'];
           echo $str = parse_smileys($str, base_url('/assets/smileys'));
