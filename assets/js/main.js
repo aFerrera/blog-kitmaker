@@ -2,8 +2,8 @@ $(document).ready(function(){
 
   $('#cajaNoticias').hide();
   $('.comentarios').hide();
-  $('#cajaNoticias').slideDown('slow');
-  $('.comentarios').slideDown('slow');
+  $('#cajaNoticias').fadeIn(500);
+  $('.comentarios').slideDown(700);
   $('.parallax').parallax();
   $('select').material_select();
 

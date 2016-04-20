@@ -15,7 +15,7 @@
 
     <ul class="collection">
       <?php foreach ($comentario as $itemComentario): ?>
-        <li class="collection-item avatar">
+        <li class="collection-item avatar ccc">
           <i class="material-icons">&#xE853;</i>
           <span class="title avatarComents"><b>Autor-</b> <?php echo $itemComentario['autor'] ?>| <b><?php echo $itemComentario['fecha'] ?></b></span>
           <p class="contenidoComentario"><?php echo $itemComentario['contenido'] ?></p>
