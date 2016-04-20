@@ -6,7 +6,7 @@
 
   <h2>BIENVENIDO AL BLOG</h2>
   <?php if($this->session->userdata('usuario')){echo 'hola de nuevo!';}else{?>
-  <p>Tambien puedes continuar como invitado para ver algunos posts: <a href="<?=site_url('/home/principal') ?>">ENTRAR COMO INVITADO</a></p>
+  <p>También puedes continuar como invitado para ver algunos posts: <a href="<?=site_url('/home/principal') ?>">ENTRAR COMO INVITADO</a></p>
   <?php }?>
   <h3><?echo $titulo?></h3>
   <?= form_open('home/ingresar', array('class'=>'form-horizontal')); ?>

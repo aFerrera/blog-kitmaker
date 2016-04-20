@@ -7,7 +7,7 @@
      <ul class="collapsible" data-collapsible="accordion" style="max-width: 600px; margin: 10px auto 10px auto;">
          <li>
              <div class="collapsible-header blue lighten-4"><i class="material-icons">&#xE8B6;</i>VER POSTS</div>
-             <div class="collapsible-body"><p><a href="<?=site_url('news/posts')?>">ULTIMOS AÑADIDOS</a> | <a href="<?=site_url('news/allPosts')?>">TODOS LOS POSTS</a></p></div>
+             <div class="collapsible-body"><p><a href="<?=site_url('news/posts')?>">ÚLTIMOS AÑADIDOS</a> | <a href="<?=site_url('news/allPosts')?>">TODOS LOS POSTS</a></p></div>
          </li>
          <li>
              <div class="collapsible-header blue lighten-4"><i class="material-icons">&#xE22B;</i>AÑADIR POST</div>
