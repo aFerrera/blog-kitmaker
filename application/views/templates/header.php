@@ -36,7 +36,7 @@ try {
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
       <link rel="stylesheet" href="https://cdn.datatables.net/1.10.11/css/jquery.dataTables.min.css">
       <script src="https://cdn.datatables.net/1.10.11/js/jquery.dataTables.min.js"></script>
-
+      <?php echo smiley_js(); ?>
   </head>
   <body>
     <nav>

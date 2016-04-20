@@ -11,7 +11,7 @@ class News extends CI_Controller {
 
 		//$this->load->library('newsLib');
 		$this->CI->load->model('Model_noticia');
-
+		$this->CI->load->helper('smiley');
 	}
 
 
@@ -90,6 +90,16 @@ class News extends CI_Controller {
 
 	public function irApost(){
 		$this->load->helper('form');
+
+		$this->load->helper('smiley');
+		$this->load->library('table');
+
+		$image_array = get_clickable_smileys(base_url('assets/smileys'), 'comentario');
+
+		$col_array = $this->table->make_columns($image_array, 8);
+
+		$data['smiley_table'] = $this->table->generate($col_array);
+
 		$codigo = $this->input->post('idNoticia');
 
 		$data['noticia'] = $this->Model_noticia->getNoticia($codigo);

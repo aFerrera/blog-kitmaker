@@ -21,5 +21,7 @@ $('.slider').slider({full_width: false});
 
 $('#myTable2').DataTable();
 
-
+$("#smileButton").click(function(){
+    $(".smileyTable").slideToggle(700);
+});
 });

@@ -1,5 +1,5 @@
 <div class="contenido">
-  <h2>BIENVENIDO, <?=$this->session->userdata('usuario'); ?></h2>
+  <h2>BIENVENIDO  <?=$this->session->userdata('usuario'); ?></h2>
 
   <p>Que deseas hacer?</p>
 
