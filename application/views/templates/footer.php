@@ -3,7 +3,7 @@
     <div class="row">
       <div class="col l6 s12">
         <p><?=$this->session->userdata('usuario')?> - <?= date('d-m-Y H:i') ?> </p>
-        <p class="black-text text-lighten-4">Prueba</p>
+        <p class="black-text text-lighten-4">Prueba Blog</p>
         <p>Powered by:  <a href="http://www.codeigniter.com/">CodeIgniter</a>, <a href="http://materializecss.com/">MaterializeCss</a>, <a href="https://design.google.com/icons/">material_Icons</a></p>
       </div>
       <div class="col l4 offset-l2 s12">
