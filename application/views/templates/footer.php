@@ -13,15 +13,16 @@
           <li><a href="<?=site_url('news/create')?>">NUEVA ENTRADA</a></li>
           <li><a href="<?=site_url('news/posts')?>">POSTS</a></li>
           <li><a href="<?=site_url('news/allPosts')?>">TODOS LOS POSTS</a></li>
-          <li><a href="<?=site_url('home/logout')?>">LOGOUT</a></li>
-        </ul>
+          <?php if($this->session->userdata('usuario')){?>
+            <li><a href="<?=site_url('home/logout')?>">LOGOUT</a></li>
+            <?php }?>
+          </ul>
+        </div>
       </div>
     </div>
-  </div>
   <div class="footer-copyright">
     <div class="container">
       © 2016 KitMaker
-      <a class="black-text text-lighten-4 right" href="#!">More Links</a>
     </div>
   </div>
 </footer>

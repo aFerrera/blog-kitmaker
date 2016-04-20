@@ -64,7 +64,8 @@ body
 
 .body-noticia
 {
-    border-bottom: solid 1px black;
+  text-align: left;
+  border-bottom: solid 1px black;
 }
 .comentarios
 {
@@ -87,7 +88,8 @@ footer{
 }
 
 footer a{
-  color: ;
+  color: black;
+  text-decoration: underline;
 }
 
 #cajaTabla{
@@ -102,13 +104,15 @@ footer a{
 }
 
 .tituloPost{
-  background-color: #b0bec5;
+  /*background-color: #b0bec5;*/
   text-align: center;
-  border-radius: 10px;
+  border-bottom: solid 3px #b0bec5;
+  /*border-radius: 10px;*/
 }
 
 .textoPost{
   padding-left: 20px;
+  padding-right: 10px;
   padding-top: 20px;
 }
 
@@ -118,4 +122,18 @@ thead{
 
 #infoAbout{
   text-align: center;
+}
+
+#insertaComentario{
+  margin-top: 5px;
+}
+
+.visualizarNoticia{
+  background-color: #b0bec5;
+  border-color: #b0bec5;
+}
+
+.bNoticia{
+  background-color: #ef9a9a;
+  border-color: #ef9a9a;
 }
