@@ -41,7 +41,7 @@ class Model_noticia extends CI_Model {
   public function getNoticias() {
 
     $this->db->order_by("id", "desc");
-    $this->db->limit(8);
+    $this->db->limit(10);
     $query = $this->db->get('noticia');
     return $query->result_array();
 
