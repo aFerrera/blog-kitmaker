@@ -17,7 +17,7 @@
       <?php foreach ($comentario as $itemComentario): ?>
         <li class="collection-item avatar">
           <i class="material-icons">&#xE853;</i>
-          <span class="title avatarComents"><b>Autor-</b> <?php echo $itemComentario['autor'] ?>| <b>fecha-</b> <?php echo $itemComentario['fecha'] ?></span>
+          <span class="title avatarComents"><b>Autor-</b> <?php echo $itemComentario['autor'] ?>| <b><?php echo $itemComentario['fecha'] ?></b></span>
           <p class="contenidoComentario"><?php echo $itemComentario['contenido'] ?></p>
 
           <?php echo form_open('news/like'); ?>
