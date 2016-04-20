@@ -42,13 +42,14 @@ class News extends CI_Controller {
 
     $titulo = $this->input->post('title');
     $texto = $this->input->post('text');
+		$imagen = $this->input->post('imagen');
 
     if ($this->form_validation->run() === FALSE) {
       $this->load->view('templates/header');
       $this->load->view('news/create');
       $this->load->view('templates/footer');
     } else {
-			$this->Model_noticia->insertNoticia($titulo, $texto);
+			$this->Model_noticia->insertNoticia($titulo, $texto, $imagen);
 			$this->posts();
 		}
 
