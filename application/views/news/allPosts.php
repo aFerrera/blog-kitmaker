@@ -11,6 +11,7 @@
         <th>TEXTO</th>
         <th>FECHA</th>
         <th>ver</th>
+        <th></th>
       </tr>
 
 
@@ -26,8 +27,17 @@
           <td>
               <?php echo form_open('news/irApost'); ?>
               <input type="hidden" name="idNoticia" id="idNoticia" value="<?php echo $news_item['id']; ?>"/>
-              <button  type="submit" class="visualizarNoticia" name="visualizarNoticia" class="waves-light btn red lighten-3"><i class="material-icons">&#xE8B6;</i></button>
+              <button  type="submit" class="visualizarNoticia" name="visualizarNoticia" class="waves-light btn blue lighten-3"><i class="material-icons">&#xE8B6;</i></button>
             </form>
+          </td>
+          <td>
+            <?php if($this->session->userdata('root')== 1){ ?>
+            <?php echo form_open('news/borrarPost'); ?>
+            <input type="hidden" name="idNoticia" value="<?php echo $news_item['id']; ?>">
+            <button  type="submit" class="bNoticia" name="bNoticia" class="waves-light btn red lighten-3"><i class="material-icons">&#xE5CD;</i></button>
+
+          </form>
+          <?php }?>
           </td>
         </tr>
       <?php endforeach; ?>
