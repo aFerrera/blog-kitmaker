@@ -63,8 +63,6 @@ class News extends CI_Controller {
 		$autor = $this->input->post('autorComentario');
 		$noticia = $this->input->post('idNoticia');
 
-		$data['noticia'] = $this->Model_noticia->getNoticia($noticia);
-
 		if ($this->form_validation->run() === FALSE) {
 			$this->load->view('templates/header');
 			$this->load->view('news/post');
@@ -77,11 +75,6 @@ class News extends CI_Controller {
 	}
 
 	public function posts() {
-		$this->load->library('pagination');
-		$config['base_url'] = 'http://localhost/proyecto/index.php/news/posts/1';
-		$config['total_rows'] = 200;
-		$config['per_page'] = 5;
-		$this->pagination->initialize($config);
 		$data['news'] = $this->Model_noticia->getNoticias();
 		$this->load->view('templates/header');
 		$this->load->view('news/posts', $data);
