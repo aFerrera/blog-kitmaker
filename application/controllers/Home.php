@@ -15,6 +15,7 @@ class Home extends CI_Controller {
 
 		$this->load->library('usuarioLib');
 		$this->CI->load->model('Model_Usuario');
+				$this->CI->load->helper('smiley');
 
 	}
 
