@@ -164,3 +164,8 @@ thead{
 .pagination *{
   margin-left: 5px;
 }
+
+
+.control-group{
+  padding: 10px;
+}
