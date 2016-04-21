@@ -62,7 +62,7 @@ try {
         </div>
 
       </nav>
-      <div id="deteccion" class="card teal lighten-4" hidden="true">
+      <div id="deteccion" class="card orange lighten-5" hidden="true">
         <p><b>User agent:</b></p>
         <?php
         $modelo = $client->getDeviceCapability('complete_device_name');

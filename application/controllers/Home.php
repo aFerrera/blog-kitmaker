@@ -6,6 +6,7 @@ class Home extends CI_Controller {
 	function __construct(){
 		parent::__construct();
 
+		/*MENSAJES DE VALIDACIÓN*/
 		$this->form_validation->set_message('required', 'Debe ingresar un valor para %s');
 		$this->form_validation->set_message('loginok', 'Usuario o clave incorrectos');
 		$this->form_validation->set_message('matches', '%s no coincide con %s');
@@ -48,6 +49,8 @@ class Home extends CI_Controller {
 		$this->load->view('home/acceso_denegado');
 	}
 
+
+	/*FUNCIONES DE LOGIN*/
 	public function ingresar() {
 		$this->form_validation->set_rules('login', 'Usuario', 'required|callback_loginok');
 		$this->form_validation->set_rules('password', 'Clave', 'required');
@@ -91,6 +94,7 @@ class Home extends CI_Controller {
 		}
 	}
 
+	/*FUNCIÓN DE LOGOUT*/
 	public function logout(){
 		$this->session->sess_destroy();
 		$this->load->view('templates/header');
@@ -98,7 +102,7 @@ class Home extends CI_Controller {
 		$this->load->view('templates/footer');
 	}
 
-
+	/*FUNCIÓN DE REGISTRO*/
 	public function registrarse(){
 		$this->load->helper('form');
 		$this->load->library('form_validation');
@@ -118,16 +122,17 @@ class Home extends CI_Controller {
       $this->load->view('templates/header');
       $this->load->view('home/inicio');
       $this->load->view('templates/footer');
-    }
+		}
 	}
 
-
+	/*PRINCIPAL*/
 	public function principal(){
 		$this->load->view('templates/header');
 		$this->load->view('home/principal');
 		$this->load->view('templates/footer');
 	}
 
+	/*ACERCA DE*/
 	public function about(){
 		$this->load->view('templates/header');
 		$this->load->view('home/about');
