@@ -107,7 +107,28 @@ class Model_noticia extends CI_Model {
     $data = array(
       'likes' => $likes + 1
     );
-      $this->db->where('id', $id);
-      return $this->db->update('comentario', $data);
+    $this->db->where('id', $id);
+    return $this->db->update('comentario', $data);
   }
+
+
+
+  public function record_count() {
+    return $this->db->count_all("noticia");
+  }
+
+  public function fetch_posts($limit, $start) {
+    $this->db->order_by("id", "desc");
+    $this->db->limit($limit, $start);
+    $query = $this->db->get("noticia");
+
+    if ($query->num_rows() > 0) {
+      foreach ($query->result() as $row) {
+        $data[] = $row;
+      }
+      return $data;
+    }
+    return false;
+  }
+
 }

@@ -47,8 +47,8 @@
 
       <input type="hidden" name="autorComentario" value="<?php echo $this->session->userdata('usuario')?>"/>
 
-      <input type="submit" name="insertaComentario" id="insertaComentario" value="Comentar post" class="waves-light btn blue-grey lighten-3 black-text"/>
-      <button id="smileButton" type="button" name="button" class="waves-light btn blue lighten-3"><img src="<?=base_url('assets/smileys/smile.gif')?>" alt="smiley" /></button>
+      <input type="submit" name="insertaComentario" id="insertaComentario" value="Comentar post" class="waves-light btn orange lighten-4 black-text"/>
+      <button id="smileButton" type="button" name="button" class="waves-light btn orange lighten-3"><img src="<?=base_url('assets/smileys/smile.gif')?>" alt="smiley" /></button>
       <div class="smileyTable" hidden="true">
         <?php echo $smiley_table; ?>
       </div>

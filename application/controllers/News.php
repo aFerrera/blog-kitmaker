@@ -12,6 +12,8 @@ class News extends CI_Controller {
 		//$this->load->library('newsLib');
 		$this->CI->load->model('Model_noticia');
 		$this->CI->load->helper('smiley');
+		$this->load->library("pagination");
+		$this->load->helper("url");
 	}
 
 
@@ -31,6 +33,22 @@ class News extends CI_Controller {
 	* @see https://codeigniter.com/user_guide/general/urls.html
 	*/
 
+	/*public function example1() {
+			$config = array();
+			$config["base_url"] = base_url() . "welcome/example1";
+			$config["total_rows"] = $this->Model_noticia->record_count();
+			$config["per_page"] = 10;
+			$config["uri_segment"] = 3;
+
+			$this->pagination->initialize($config);
+
+			$page = ($this->uri->segment(3)) ? $this->uri->segment(3) : 0;
+			$data["results"] = $this->Countries->
+					fetch_countries($config["per_page"], $page);
+			$data["links"] = $this->pagination->create_links();
+
+			$this->load->view("example1", $data);
+	}*/
 
   public function create(){
     $this->load->helper('form');
@@ -76,7 +94,51 @@ class News extends CI_Controller {
 	}
 
 	public function posts() {
-		$data['news'] = $this->Model_noticia->getNoticias();
+		//$data['news'] = $this->Model_noticia->getNoticias();
+		$config = array();
+		$config["base_url"] = base_url() . "index.php/news/posts";
+		$config["total_rows"] = $this->Model_noticia->record_count();
+		$config["per_page"] = 5;
+		$config["uri_segment"] = 3;
+
+		// If you want to wrap your pagination in something
+		$config['full_tag_open'] = '<ul class="pagination">';
+		$config['full_tag_close'] = '</ul>';
+
+		// If you want to wrap the "go to first" link
+		$config['first_link'] = 'First';
+		$config['first_tag_open'] = '<li class="btn orange lighten-4">';
+		$config['first_tag_close'] = '</li>';
+
+		// If you want to wrap the "go to last" link
+		$config['last_link'] = 'Last';
+		$config['last_tag_open'] = '<li class="btn orange lighten-4">';
+		$config['last_tag_close'] = '</li>';
+
+		// If you want to wrap the next link
+		$config['next_link'] = 'Next';
+		$config['next_tag_open'] = '<li class="btn orange lighten-4">';
+		$config['next_tag_close'] = '</li>';
+
+		// If you want to wrap the previous link
+		$config['prev_link'] = 'Last';
+		$config['prev_tag_open'] = '<li class="btn orange lighten-4">';
+		$config['prev_tag_close'] = '</li>';
+
+		// Wrap/style active link
+		$config['cur_tag_open'] = '<li class="active btn orange lighten-4">';
+		$config['cur_tag_close'] = '</li>';
+
+		// Wrap the 'digit' link.
+		$config['num_tag_open'] = '<li class="btn orange lighten-4">';
+		$config['num_tag_close'] = '</li>';
+
+		$this->pagination->initialize($config);
+
+		$page = ($this->uri->segment(3)) ? $this->uri->segment(3) : 0;
+		$data["results"] = $this->Model_noticia->fetch_posts($config["per_page"], $page);
+		$data["links"] = $this->pagination->create_links();
+
 		$this->load->view('templates/header');
 		$this->load->view('news/posts', $data);
 		$this->load->view('templates/footer');
