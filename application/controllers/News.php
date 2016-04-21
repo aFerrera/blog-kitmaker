@@ -2,7 +2,7 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class News extends CI_Controller {
-
+	/*CRUD TABLA NOTICIAS*/
 	function __construct(){
 		parent::__construct();
 
@@ -50,6 +50,7 @@ class News extends CI_Controller {
 			$this->load->view("example1", $data);
 	}*/
 
+	/*INSERTAR NOTICIA*/
   public function create(){
     $this->load->helper('form');
     $this->load->library('form_validation');
@@ -73,6 +74,7 @@ class News extends CI_Controller {
 
 	}
 
+	/*INSERTAR COMENTASRIO*/
 	public function insertComent(){
 		$this->load->helper('form');
 		$this->load->library('form_validation');
@@ -93,6 +95,7 @@ class News extends CI_Controller {
 
 	}
 
+	/*CARGA DE NOTICIAS*/
 	public function posts() {
 		//$data['news'] = $this->Model_noticia->getNoticias();
 		$config = array();
@@ -144,6 +147,7 @@ class News extends CI_Controller {
 		$this->load->view('templates/footer');
 	}
 
+	/*CARGA DE NOTICIAS SIN EXCEPCIÓN*/
 	public function allPosts() {
 		$data['news'] = $this->Model_noticia->getAllNoticias();
 		$this->load->view('templates/header');
@@ -151,6 +155,7 @@ class News extends CI_Controller {
 		$this->load->view('templates/footer');
 	}
 
+	/*NOTICIA EN PARTICULAR, FILTRADO POR CÓDIGO*/
 	public function irApost(){
 		$this->load->helper('form');
 
@@ -173,6 +178,7 @@ class News extends CI_Controller {
 		$this->load->view('templates/footer');
 	}
 
+	/*DELETE POST*/
 	public function borrarPost(){
 		$this->load->helper('form');
 		$codigo = $this->input->post('idNoticia');
@@ -191,6 +197,7 @@ class News extends CI_Controller {
 		$this->load->view('templates/footer');
 	}
 
+	/*SISTEMA DE LIKES*/
 	public function like(){
 		  $this->load->helper('form');
 			$codigo = $this->input->post('idNoticia2');
