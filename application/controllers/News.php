@@ -126,7 +126,7 @@ class News extends CI_Controller {
 		$config['prev_tag_close'] = '</li>';
 
 		// Wrap/style active link
-		$config['cur_tag_open'] = '<li class="active btn orange lighten-4">';
+		$config['cur_tag_open'] = '<li class="active btn orange lighten-3">';
 		$config['cur_tag_close'] = '</li>';
 
 		// Wrap the 'digit' link.
