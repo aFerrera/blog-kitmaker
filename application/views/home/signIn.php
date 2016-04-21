@@ -12,7 +12,7 @@
   <input type="password" name="newPass" class="validate"/>
 
 
-  <input type="submit" name="submit" id="nuevoUsuario" value="Gegistrarse" class="waves-light btn blue-grey lighten-3 black-text"/>
+  <input type="submit" name="submit" id="nuevoUsuario" value="Gegistrarse" class="waves-light btn orange lighten-4 black-text"/>
 
 </form>
 </div>

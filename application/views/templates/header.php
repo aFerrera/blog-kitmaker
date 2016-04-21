@@ -40,14 +40,14 @@ try {
   </head>
   <body>
     <nav>
-      <div class="nav-wrapper blue lighten-4">
+      <div class="nav-wrapper light-green lighten-4">
         <img id="logo" alt="kitmaker_logo" src="<?= base_url('assets/img/kitmaker_logo.png')?>">
-        <a class="brand" href="#"><b>-<?=$this->session->userdata('usuario')?></b></a>
+        <a class="brand black-text" href="#"><b>-<?=$this->session->userdata('usuario')?></b></a>
         <!-- Dropdown Trigger -->
-        <a style="position: relative; left: 20px; float: left; width: 200px;" class='dropdown-button btn-large blue-grey lighten-3 black-text' href='#' data-activates='dropdown1'>MENU</a>
+        <a style="position: relative; left: 20px; float: left; width: 200px;" class='dropdown-button btn-large orange lighten-4 black-text' href='#' data-activates='dropdown1'>MENU</a>
 
         <!-- Dropdown Structure -->
-        <ul id='dropdown1' class='dropdown-content blue-grey lighten-3 black-text'>
+        <ul id='dropdown1' class='dropdown-content orange lighten-4 black-text'>
           <li><a href="<?=base_url()?>">HOME</a></li>
           <li><a href="<?=site_url('news/create')?>">NUEVA ENTRADA</a></li>
           <li><a href="<?=site_url('news/posts')?>">POSTS</a></li>
@@ -62,7 +62,7 @@ try {
         </div>
 
       </nav>
-      <div id="deteccion" class="card orange lighten-4" hidden="true">
+      <div id="deteccion" class="card teal lighten-4" hidden="true">
         <p><b>User agent:</b></p>
         <?php
         $modelo = $client->getDeviceCapability('complete_device_name');

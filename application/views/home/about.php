@@ -1,5 +1,5 @@
 <p id="infoAbout">
-  Esto es una web desarrollada mediante varias tecnologias, entre las cuales.
+  Esta es una web desarrollada mediante varias tecnologias, entre las cuales.
 </p>
 
 <div class="slider center-block">

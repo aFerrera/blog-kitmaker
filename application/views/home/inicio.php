@@ -1,12 +1,12 @@
 <div class="parallax-container">
-  <div class="parallax" ><img src="<?=base_url('assets/img/nevado1.jpg') ?>" style="display: block; transform: translate3d(-50%, 512px, 0px); width: auto;"></div>
+  <div class="parallax" ><img src="<?=base_url('assets/img/bosque2.jpg') ?>" style="display: block; transform: translate3d(-50%, 512px, 0px); width: auto;"></div>
 </div>
 
-<div id="content" class=" section blue lighten-5 center-block center-align">
+<div id="content" class=" section light-green lighten-5 center-block center-align">
 
   <h2>BIENVENIDO AL BLOG</h2>
   <?php if($this->session->userdata('usuario')){echo 'hola de nuevo!';}else{?>
-  <p>Tambien puedes continuar como invitado para ver algunos posts: <a href="<?=site_url('/home/principal') ?>">ENTRAR COMO INVITADO</a></p>
+  <p>También puedes continuar como invitado para ver algunos posts: <a href="<?=site_url('/home/principal') ?>">ENTRAR COMO INVITADO</a></p>
   <?php }?>
   <h3><?echo $titulo?></h3>
   <?= form_open('home/ingresar', array('class'=>'form-horizontal')); ?>
@@ -24,7 +24,7 @@
   </div>
 
   <div class="form-actions">
-    <?= form_button(array('type'=>'submit', 'content'=>'Ingresar', 'class'=>'btn btn-primary blue-grey lighten-3 black-text')); ?>
+    <?= form_button(array('type'=>'submit', 'content'=>'Ingresar', 'class'=>'btn btn-primary orange lighten-4 black-text')); ?>
 
   </div>
 
@@ -32,5 +32,5 @@
 </div>
 
 <div class="parallax-container">
-  <div class="parallax" ><img src="<?=base_url('assets/img/nevado2.jpg') ?>" style="display: block; transform: translate3d(-50%, 512px, 0px); width: auto;"></div>
+  <div class="parallax" ><img src="<?=base_url('assets/img/bosque2.jpg') ?>" style="display: block; transform: translate3d(-50%, 512px, 0px); width: auto;"></div>
 </div>

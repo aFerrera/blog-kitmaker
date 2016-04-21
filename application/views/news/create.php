@@ -15,12 +15,12 @@
     <label for="text">Texto</label>
     <textarea name="text"></textarea>
 
-    <p>Si lo desea, puede insertar una imagen por URL.</p>
+    <p>Si lo desea, puede insertar una imágen por URL.</p>
 
     <label for="imagen">URL imagen</label>
     <input type="text" name="imagen" class="validate"/>
 
-    <input type="submit" name="submit" id="nuevoPost" value="Añadir al blog" class="waves-light btn blue-grey lighten-3 black-text"/>
+    <input type="submit" name="submit" id="nuevoPost" value="Añadir al blog" class="waves-light btn orange lighten-4 black-text"/>
 
   </form>
 </div>

@@ -27,7 +27,7 @@
           <td>
               <?php echo form_open('news/irApost'); ?>
               <input type="hidden" name="idNoticia" id="idNoticia" value="<?php echo $news_item['id']; ?>"/>
-              <button  type="submit" class="visualizarNoticia" name="visualizarNoticia" class="waves-light btn blue lighten-3"><i class="material-icons">&#xE8B6;</i></button>
+              <button  type="submit" class="visualizarNoticia" name="visualizarNoticia" class="waves-light btn orange lighten-4"><i class="material-icons">&#xE8B6;</i></button>
             </form>
           </td>
           <td>

@@ -1,6 +1,6 @@
 body
 {
-    background-color: #e3f2fd;
+    background-color: #f1f8e9;
 }
 
 #logo
@@ -30,7 +30,7 @@ body
 }
 .collapsible .collapsible-header
 {
-    border: solid 1px #90caf9;
+    border: solid 1px #b3cc97;
 }
 
 .createPost
@@ -105,10 +105,9 @@ footer a{
 }
 
 .tituloPost{
-  /*background-color: #b0bec5;*/
+  background-color: #c5e1a5;
   text-align: center;
-  border-bottom: solid 3px #b0bec5;
-  /*border-radius: 10px;*/
+  border-radius: 4px;
 }
 
 .textoPost{
@@ -118,7 +117,7 @@ footer a{
 }
 
 thead{
-    background-color: #b0bec5;
+    background-color: #ffe0b2;
 }
 
 #infoAbout{
@@ -148,8 +147,8 @@ thead{
 }
 
 .visualizarNoticia{
-  background-color: #b0bec5;
-  border-color: #b0bec5;
+  background-color: #c5e1a5;
+  border-color: #c5e1a5;
 }
 
 .bNoticia{
@@ -160,4 +159,8 @@ thead{
 .smileyTable *{
 
   width: 300px;
+}
+
+.pagination *{
+  margin-left: 5px;
 }
